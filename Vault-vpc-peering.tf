@@ -1,11 +1,6 @@
-provider "aws" {
-  region = var.Vault-region
-}
 
-data "aws_caller_identity" "current" {}
-output "account_id" {
-  value = data.aws_caller_identity.current.account_id
-}
+
+
 
 resource "aws_vpc" "peer" {
   cidr_block = "172.30.0.0/16"
