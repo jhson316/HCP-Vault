@@ -1,7 +1,3 @@
-
-
-
-
 resource "aws_vpc" "peer" {
   cidr_block = "172.30.0.0/16"
 }

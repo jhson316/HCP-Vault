@@ -23,3 +23,8 @@ output "vpc_id" {
 # output "security_group_vpc_id" {
 #   value = aws_default_security_group.default.vpc_id
 # }
+
+
+output "aws_ard" {
+  value = aws_vpc.peer.arn
+}
