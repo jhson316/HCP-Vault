@@ -25,6 +25,6 @@ output "vpc_id" {
 # }
 
 
-output "aws_ard" {
-  value = aws_vpc.peer.arn
-}
+# output "aws_ard" {
+#   value = aws_vpc.peer.arn
+# }
