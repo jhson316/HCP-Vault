@@ -1,7 +1,7 @@
 resource "hcp_hvn" "learn_hcp_vault_hvn" {
   hvn_id         = var.hvn_id
   cloud_provider = var.cloud_provider
-  region         = var.Vauit-region
+  region         = var.Vault-region
 }
 
 resource "hcp_vault_cluster" "learn_hcp_vault" {
