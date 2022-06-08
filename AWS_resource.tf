@@ -31,7 +31,7 @@ resource "aws_default_security_group" "default" {
     protocol  = "tcp"
     # self      = true
     cidr_blocks = ["0.0.0.0/0"]
-    from_port = 22
+    from_port = 21
     to_port   = 22
   }
 
