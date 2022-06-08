@@ -8,7 +8,7 @@ output "account_id" {
 }
 
 resource "aws_vpc" "peer" {
-  cidr_block = "172.31.0.0/16"
+  cidr_block = "172.30.0.0/16"
 }
 
 data "aws_arn" "peer" {
