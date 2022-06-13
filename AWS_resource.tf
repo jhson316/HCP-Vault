@@ -6,7 +6,7 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami           = "ami-0eb218869d3d2d7e7"
   instance_type = "t2.micro"
-  key_name = "TEST"
+  key_name      = "TEST"
   # key_name = aws_key_pair.TEST.key_name
 
   tags = {
@@ -20,19 +20,19 @@ resource "aws_instance" "app_server" {
 # }
 
 resource "aws_default_vpc" "default_vpc" {
-  
+
 }
 
 resource "aws_default_security_group" "default" {
   vpc_id = aws_default_vpc.default_vpc.id
-  
+
   ingress {
     # protocol  = -1
-    protocol  = "tcp"
+    protocol = "tcp"
     # self      = true
     cidr_blocks = ["0.0.0.0/0"]
-    from_port = 22
-    to_port   = 22
+    from_port   = 22
+    to_port     = 22
   }
 
   egress {
@@ -40,13 +40,5 @@ resource "aws_default_security_group" "default" {
     cidr_blocks = ["0.0.0.0/0"]
     from_port   = 0
     to_port     = 0
-  }
-}
-
-resource "aws_vpc" "VPC_test" {
-  cidr_block = "193.16.100.0/24"
-
-  tags = {
-    Name = "VPC Test"
   }
 }

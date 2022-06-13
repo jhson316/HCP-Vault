@@ -26,7 +26,7 @@ variable "Vault-region" {
   description = "The region of the HCP HVN and Vault cluster."
   type        = string
   # default     = "us-west-2"
-  default     = "ap-southeast-2"
+  default = "ap-southeast-2"
 }
 
 variable "cloud_provider" {
