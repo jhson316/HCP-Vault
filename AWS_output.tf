@@ -8,12 +8,12 @@ output "account_id" {
   value = data.aws_caller_identity.current.account_id
 }
 
-data "aws_internet_gateway" "default" {
-  vpc_id = aws_default_vpc.default_vpc.id
-}
-output "Default_igw_id" {
-  value = aws_internet_gateway.default.id #aws_default_vpc.default_vpc.default_route_table_id
-}
+# data "aws_internet_gateway" "default" {
+#   vpc_id = aws_default_vpc.default_vpc.id
+# }
+# output "Default_igw_id" {
+#   value = aws_internet_gateway.default.id #aws_default_vpc.default_vpc.default_route_table_id
+# }
 
 # output "vpc_arn" {
 #   value = aws_vpc.peer.arn
