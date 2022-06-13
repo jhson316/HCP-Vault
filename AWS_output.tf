@@ -9,7 +9,7 @@ output "account_id" {
 }
 
 resource "aws_internet_gateway" "default" {
-  vpc_id = aws_default_vpc.default_vpc  
+  vpc_id = aws_default_vpc.default_vpc.id
 }
 output "Default_igw_id" {
   value = aws_internet_gateway.default.id #aws_default_vpc.default_vpc.default_route_table_id
