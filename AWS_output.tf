@@ -16,6 +16,10 @@ output "vpc_id" {
   value = aws_default_vpc.default_vpc.id
 }
 
+output "SSH" {
+  value = "ssh -i \"TEST.pem\" ec2-user@" && aws_instance.app_server.public_dns
+}
+
 # output "security_group_id" {
 #   value = aws_default_security_group.default.id
 # }
