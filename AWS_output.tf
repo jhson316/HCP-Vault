@@ -8,7 +8,7 @@ output "account_id" {
   value = data.aws_caller_identity.current.account_id
 }
 
-resource "aws_internet_gateway" "default" {
+data "aws_internet_gateway" "default" {
   vpc_id = aws_default_vpc.default_vpc.id
 }
 output "Default_igw_id" {
