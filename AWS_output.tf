@@ -17,7 +17,8 @@ output "vpc_id" {
 }
 
 output "SSH" {
-  value = "ssh -i \"TEST.pem\" ec2-user@" && aws_instance.app_server.public_dns
+  # value = "ssh -i \"TEST.pem\" ec2-user@" && aws_instance.app_server.public_dns
+  value = aws_instance.app_server.public_dns
 }
 
 # output "security_group_id" {
