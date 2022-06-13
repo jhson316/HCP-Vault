@@ -42,3 +42,11 @@ resource "aws_default_security_group" "default" {
     to_port     = 0
   }
 }
+
+resource "aws_vpc" "VPC_test" {
+  cidr_block = "193.16.100.0/24"
+
+  tags = {
+    Name = "VPC Test"
+  }
+}
