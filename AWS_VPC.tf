@@ -37,3 +37,11 @@ resource "aws_subnet" "Pri_sub2" {
     "Name" = "VPC Test Pri_sub2"
   }
 }
+
+resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.VPC_test.id
+
+  tags = {
+    Name = "Internet Gateway"
+  }
+}
